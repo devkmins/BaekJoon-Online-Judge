@@ -1,2 +1,2 @@
 # BaekJoon-Online-Judge
-Problem Solve
+Problem Solving practice
