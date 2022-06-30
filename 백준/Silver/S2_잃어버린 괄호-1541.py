@@ -2,10 +2,6 @@ import re
 
 a = input()
 
-for n in a:
-    if n == '-':
-
-
-re.split('[+-]', a)
+b = re.split('[0~9]', a)
 
 print(b)
