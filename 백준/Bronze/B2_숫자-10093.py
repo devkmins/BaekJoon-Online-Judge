@@ -1,14 +1,13 @@
 a, b = map(int, input().split())
 
-a = min(a, b)
-b = max(a, b)
+n1 = min(a, b)
+n2 = max(a, b)
 
-numbers = [i for i in range(a+1, b)]
+n = n2 - n1 - 1
 
-print(len(numbers))
-
-for i in numbers:
-    print(i, end=' ')
-
-if (a + 1) != b and a != b:
-    print()
+if n2 - n1 <= 1:
+    n = 0
+    
+print(n)
+arr = [i for i in range(n1 + 1, n2)]
+print(*arr, end='')

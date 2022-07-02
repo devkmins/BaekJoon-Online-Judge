@@ -1,44 +1,28 @@
 import sys
 
+n = int(sys.stdin.readline())
+
 top = []
 
-
-class Stack:
-    def push(X):
-        top.append(X)
-
-    def pop():
+for _ in range(n):
+    ex_input = sys.stdin.readline().split()
+    if 'push' in ex_input:
+        top.append(ex_input[1])
+    elif 'pop' in ex_input:
         if len(top) == 0:
             print(-1)
         else:
             print(top[-1])
             top.pop(-1)
-
-    def size():
+    elif 'size' in ex_input:
         print(len(top))
-
-    def empty():
+    elif 'empty' in ex_input:
         if len(top) == 0:
             print(1)
         else:
             print(0)
-
-    def top():
+    elif 'top' in ex_input:
         if len(top) == 0:
             print(-1)
         else:
             print(top[-1])
-
-
-for _ in range(int(sys.stdin.readline())):
-    ex_input = sys.stdin.readline()
-    if 'push' in ex_input:
-        Stack.push(int(ex_input.split()[1]))
-    elif 'pop' in ex_input:
-        Stack.pop()
-    elif 'size' in ex_input:
-        Stack.size()
-    elif 'empty' in ex_input:
-        Stack.empty()
-    elif 'top' in ex_input:
-        Stack.top()
