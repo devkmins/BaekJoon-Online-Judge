@@ -4,9 +4,8 @@ charge = list(map(int, input().split()))
 YS, MS = 0, 0
 
 for c in charge:
-    YS += (c // 30 + 1) * 10
-    MS += (c // 60 + 1) * 15
-    print(YS, MS)
+    YS += c // 30 * 10 + 10
+    MS += c // 60 * 15 + 15
 
 if YS < MS:
     print('Y', YS)

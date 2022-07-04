@@ -1,3 +1,22 @@
+'''
+해결 방법 -
+1. 두 수의 최대 공약수를 구한다. (나누고 난 후의 나머지)
+2. 입력 받은 두 수를 곱한 뒤에, 최대 공약수를 나누어준다.
+'''
+
+import sys
+
+T = int(input())
+
+for _ in range(T):
+    a, b = map(int, sys.stdin.readline().split())
+    A, B = a, b
+    while a % b != 0:
+        a, b = b, a % b
+    print(A * B // b)
+
+# 이전에 내가 작성한 코드
+'''
 T = int(input())
 
 for _ in range(T):
@@ -17,3 +36,4 @@ for _ in range(T):
             else:
                 continue
         print(min(set(min_L)))
+'''
