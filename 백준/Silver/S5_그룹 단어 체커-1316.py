@@ -1,13 +1,14 @@
 N = int(input())
-group = 0
+
+C = N
 
 for _ in range(N):
     word = input()
-    word_list = []
-    for w in word:
-        word_list.append(w)
-        if w.index == word_list.index(w) + 1:
+    for i in range(len(word) - 1):
+        if word[i] == word[i+1]:
+            pass
+        elif word[i] in word[i+1:]:
+            C -= 1
             break
-    group += 1
-
-print(group)
+        
+print(C)
