@@ -4,13 +4,18 @@ while True:
         break
     else:
         numbers = []
-        for num in range(1, n+1):
-            while True:
-                if n % num == 0:
-                    n //= num
-                    numbers.append(num)
-                else:
-                    break
+        p = ''
+        for num in range(1, n):
+            if n % num == 0:
+                numbers.append(num)
+            else:
+                pass
         if n == sum(numbers):
-            print(numbers)
-            #print(f'{n} = ')
+            for i in numbers:
+                if numbers.index(i) == 0:
+                    p += f'{i}'
+                else:
+                    p += f' + {i}'
+            print(f'{n} = {p}')
+        else:
+            print(f'{n} is NOT perfect.')
