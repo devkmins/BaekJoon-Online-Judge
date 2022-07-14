@@ -1,12 +1,12 @@
-t = int(input())
-
-for test in range(t):
+for _ in range(int(input())):
     n = int(input())
-    n_list = []
-    for i in range(1, 13):
-        for j in range(1, 13):
-            if i < j:
-                if i + j == n:
-                    n_list.append(f'{i} {j}')
-    for k in range(len(n_list)):
-        print(f'Pairs for {n}: {n_list}')
+    start = 1
+    print(f"Pairs for {n}:", end = ' ')
+    
+    for k in range((n - 1) // 2):
+        if k != 0:
+            print(',', end = ' ')
+        print(start, n - start, end = '')
+        start += 1
+        
+    print()
